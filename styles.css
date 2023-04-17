@@ -21,19 +21,42 @@
 
 .number-screen {
   position: relative;
+  font-family: "Rajdhani", sans-serif;
+  padding-top: 4px;
+  padding-right: 10px;
+  font-size: 40px;
   border: 1px solid black;
   min-width: 300px;
+  max-width: 300px;
   min-height: 30px;
   flex-grow: 1;
   margin-top: 20px;
-  text-align: center;
+  text-align: right;
 }
 
 .number-buttons {
-  border: 1px solid black;
+  max-width: 300px;
   min-width: 300px;
   min-height: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
-  flex-grow: 7;
+  flex-basis: 280px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.number {
+  background-color: transparent;
+  font-size: 30px;
+  color: rgb(203, 200, 200);
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.number:hover {
+  background-color: rgb(224, 78, 78);
 }
