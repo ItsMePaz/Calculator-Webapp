@@ -17,39 +17,70 @@ const functionDivide = document.getElementById("function-divide");
 const functionDecimal = document.getElementById("decimal");
 const functionEquate = document.getElementById("equate");
 
+const firstTerm = [];
+const secondTerm = [];
+const ifElseOperator = [];
 const screen = [];
 
 function clearInputs() {
   numberScreen.innerText = "";
 }
 
+//
+const calculator = (() => {
+  const add = (a, b) => a + b;
+  const subtract = (a, b) => a - b;
+  const multiply = (a, b) => a * b;
+  const divide = (a, b) => a / b;
+
+  return { add, subtract, multiply, divide };
+})();
+
+/* console.log(calculator.add(2, 4));
+ */
+//
+
 //Function Events
 functionAdd.addEventListener("click", function () {
-  numberScreen.innerText += "+";
-  console.log(parseInt(screen.join("")));
+  const first = parseInt(screen.join(""));
+  firstTerm.push(first);
+  console.log(firstTerm);
+  screen.length = 0;
   clearInputs();
   console.log(screen);
 });
 
 functionSubtract.addEventListener("click", function () {
-  numberScreen.innerText += "-";
-  console.log(parseInt(screen.join("")));
+  const first = parseInt(screen.join(""));
+  firstTerm.push(first);
+  console.log(firstTerm);
+  screen.length = 0;
   clearInputs();
   console.log(screen);
+  const condition = "Subtract";
+  ifElseOperator.push(condition);
 });
 
 functionMultiply.addEventListener("click", function () {
-  numberScreen.innerText += "x";
-  console.log(parseInt(screen.join("")));
+  const first = parseInt(screen.join(""));
+  firstTerm.push(first);
+  console.log(firstTerm);
+  screen.length = 0;
   clearInputs();
   console.log(screen);
+  const condition = "Multiply";
+  ifElseOperator.push(condition);
 });
 
 functionDivide.addEventListener("click", function () {
-  numberScreen.innerText += "/";
-  console.log(parseInt(screen.join("")));
+  const first = parseInt(screen.join(""));
+  firstTerm.push(first);
+  console.log(firstTerm);
+  screen.length = 0;
   clearInputs();
   console.log(screen);
+  const condition = "Divide";
+  ifElseOperator.push(condition);
 });
 
 functionDecimal.addEventListener("click", function () {
@@ -61,6 +92,33 @@ functionDecimal.addEventListener("click", function () {
 
 functionEquate.addEventListener("click", function () {
   console.log(screen.join(""));
+  const first = parseInt(screen.join(""));
+  firstTerm.push(first);
+  console.log(firstTerm);
+
+  //ifElse
+  if (ifElseOperator[0] === "Subtract") {
+    const solution = calculator.subtract(firstTerm[0], firstTerm[1]);
+    console.log(solution);
+    numberScreen.innerText = solution.toPrecision(12);
+  } else if (ifElseOperator[0] === "Add") {
+    const solution = calculator.add(firstTerm[0], firstTerm[1]);
+    console.log(solution);
+    numberScreen.innerText = solution.toPrecision(12);
+  } else if (ifElseOperator[0] === "Multiply") {
+    const solution = calculator.multiply(firstTerm[0], firstTerm[1]);
+    console.log(solution);
+    numberScreen.innerText = solution.toPrecision(12);
+  } else if (ifElseOperator[0] === "Divide") {
+    const solution = calculator.divide(firstTerm[0], firstTerm[1]);
+    console.log(solution);
+    numberScreen.innerText = solution.toPrecision(12);
+  }
+
+  if (firstTerm.length > 2) {
+    numberScreen.innerText = "";
+    firstTerm.length = 0;
+  }
 });
 
 //Number Events
