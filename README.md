@@ -29,4 +29,5 @@ Vanilla HTML, CSS, and JavaScript is used to create this.
 --Future Fixes--
 
 1. Allow the user to show the current result when clicking an operator in the second consecutive time
-2. to follow...
+2. Apply reset button and function
+3. to follow...
