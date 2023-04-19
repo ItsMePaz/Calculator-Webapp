@@ -25,3 +25,8 @@ Vanilla HTML, CSS, and JavaScript is used to create this.
 7. Convert the concatenated string into a number using parseint
 8. Also, once the user clicks an operator, the program will clear the screen array then it will push what has been removed into the firstTerm array. This is to avoid the first and second terms to be concatenated together.
 9. Once the user inputs the second term, if the user chooses to click the equate button, the concatenated numbers will be stored in one array then the program will operated the 0 and 1 position inside that array.
+
+--Future Fixes--
+
+1. Allow the user to show the current result when clicking an operator in the second consecutive time
+2. to follow...

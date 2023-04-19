@@ -100,19 +100,19 @@ functionEquate.addEventListener("click", function () {
   if (ifElseOperator[0] === "Subtract") {
     const solution = calculator.subtract(firstTerm[0], firstTerm[1]);
     console.log(solution);
-    numberScreen.innerText = solution.toPrecision(12);
+    numberScreen.innerText = solution;
   } else if (ifElseOperator[0] === "Add") {
     const solution = calculator.add(firstTerm[0], firstTerm[1]);
     console.log(solution);
-    numberScreen.innerText = solution.toPrecision(12);
+    numberScreen.innerText = solution;
   } else if (ifElseOperator[0] === "Multiply") {
     const solution = calculator.multiply(firstTerm[0], firstTerm[1]);
     console.log(solution);
-    numberScreen.innerText = solution.toPrecision(12);
+    numberScreen.innerText = solution;
   } else if (ifElseOperator[0] === "Divide") {
     const solution = calculator.divide(firstTerm[0], firstTerm[1]);
     console.log(solution);
-    numberScreen.innerText = solution.toPrecision(12);
+    numberScreen.innerText = solution.toPrecision(5);
   }
 
   if (firstTerm.length > 2) {
