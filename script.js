@@ -42,7 +42,7 @@ const calculator = (() => {
 
 //Function Events
 functionAdd.addEventListener("click", function () {
-  const first = parseInt(screen.join(""));
+  const first = parseFloat(screen.join(""));
   firstTerm.push(first);
   console.log(firstTerm);
   screen.length = 0;
@@ -51,7 +51,7 @@ functionAdd.addEventListener("click", function () {
 });
 
 functionSubtract.addEventListener("click", function () {
-  const first = parseInt(screen.join(""));
+  const first = parseFloat(screen.join(""));
   firstTerm.push(first);
   console.log(firstTerm);
   screen.length = 0;
@@ -62,7 +62,7 @@ functionSubtract.addEventListener("click", function () {
 });
 
 functionMultiply.addEventListener("click", function () {
-  const first = parseInt(screen.join(""));
+  const first = parseFloat(screen.join(""));
   firstTerm.push(first);
   console.log(firstTerm);
   screen.length = 0;
@@ -73,7 +73,7 @@ functionMultiply.addEventListener("click", function () {
 });
 
 functionDivide.addEventListener("click", function () {
-  const first = parseInt(screen.join(""));
+  const first = parseFloat(screen.join(""));
   firstTerm.push(first);
   console.log(firstTerm);
   screen.length = 0;
@@ -92,7 +92,7 @@ functionDecimal.addEventListener("click", function () {
 
 functionEquate.addEventListener("click", function () {
   console.log(screen.join(""));
-  const first = parseInt(screen.join(""));
+  const first = parseFloat(screen.join(""));
   firstTerm.push(first);
   console.log(firstTerm);
 
